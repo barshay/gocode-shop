@@ -42,8 +42,8 @@ export default function AppNavBar({ itemsInCart, isAdmin, setIsDrawerOpen }) {
           My GoCode Shop
         </Typography>
         {isAdmin && (
-          <Button color="inherit" onClick={() => navigate("menage")}>
-            Manage
+          <Button color="inherit" onClick={() => navigate("admin")}>
+            Admin
           </Button>
         )}
         <Button
