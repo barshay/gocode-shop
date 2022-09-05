@@ -1,0 +1,27 @@
+.cartProducts {
+    margin-top: 30px;
+}
+
+.cart-empty {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.cart-empty > h1 {
+    font-size: 30px;
+}
+.shopping-cart>h1 {
+    font-size: 30px;
+}
+
+.shopping-cart {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.price-div {
+    display: flex;
+    flex-direction: row-reverse;
+    border-bottom: 1px solid #bbb;
+}
