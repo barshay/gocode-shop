@@ -20,7 +20,7 @@ function App() {
   const getProductsFromApi = async () => {
     try {
       // const response = await fetch("https://fakestoreapi.com/products");
-      const response = "http://localhost:7000/api/products";
+      const response = await fetch("http://localhost:7000/api/products");
       const dataFromApi = await response.json();
       setProductsList(dataFromApi);
     } catch (e) {
