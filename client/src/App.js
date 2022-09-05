@@ -10,6 +10,7 @@ import Login from "./views/Login";
 import "./App.css";
 import ProductDetails from "./views/ProductDetails";
 import CartDrawer from "./components/CartDrawer";
+import axios from "axios";
 
 function App() {
   const [productsList, setProductsList] = useState([]);
@@ -18,14 +19,11 @@ function App() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const getProductsFromApi = async () => {
-    try {
-      // const response = await fetch("https://fakestoreapi.com/products");
-      const response = await fetch("http://localhost:7000/api/products");
-      const dataFromApi = await response.json();
-      setProductsList(dataFromApi);
-    } catch (e) {
-      console.log(e);
-    }
+    const productsUrl = "http://localhost:8000/api/products";
+    const response = await axios.get(productsUrl);
+    console.log(response);
+    const data = await response.data;
+    setProductsList(data);
   };
 
   const categories = productsList
