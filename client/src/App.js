@@ -19,7 +19,7 @@ function App() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const getProductsFromApi = async () => {
-    const productsUrl = "http://localhost:8000/api/products";
+    const productsUrl = "https://shay-shop.onrender.com/api/products";
     const response = await axios.get(productsUrl);
     console.log(response);
     const data = await response.data;
